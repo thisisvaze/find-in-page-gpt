@@ -30,6 +30,6 @@ We may update this Privacy Policy occasionally. We will notify you of any change
 
 ## Contact Us
 
-For any questions about this Privacy Policy, please contact us at [support@email.com].
+For any questions about this Privacy Policy, please contact us at [aadityavikasvaze@gmail.com].
 
 By using our extension, you agree to the collection and use of information in accordance with this policy. If you do not agree to any terms in this policy, please do not install or use our extension.
