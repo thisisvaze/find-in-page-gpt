@@ -5,4 +5,4 @@ Chrome Extension to Find in Page using ChatGPT
 
 # How to install it?
 Download this project and follow these instructions to load an unpacked extension.
-![How to load unpacked extension](https://www.extension.ninja/blog/post/how-to-load-unpacked-extension/)
+[How to load unpacked extension](https://www.extension.ninja/blog/post/how-to-load-unpacked-extension/)
