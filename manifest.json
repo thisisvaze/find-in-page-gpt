@@ -3,7 +3,6 @@
     "name": "Find in page GPT",
     "version": "0.1",
     "description": "Find information in the page using ChatGPT",
-    "host_permissions": ["<all_urls>"],
     "permissions": [
       "activeTab","tabs",
       "storage"
