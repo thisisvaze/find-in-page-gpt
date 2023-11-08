@@ -1,0 +1,74 @@
+body {
+    min-width: 300px;
+    min-height: 200px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  #settingsContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .qInput {
+    width: 100%;
+    font-size: medium;
+    border-radius: 3px;
+    border: none;
+  }
+  .qInput:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  .qInput:active {
+    border: none;
+  }
+  .container-input{
+    margin-bottom:3px;
+  }
+
+  #settingsButton{
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  #apiKey {
+    width: 95%;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .buttonStyle {
+
+    opacity: 0;
+    width: 100%;
+    background-color: rgb(227, 227, 227);
+    border: none;
+    border-radius: 6px;
+    font-size: x-small;
+    font-style: bold;
+    margin-top:10px;
+  }
+
+  .modal {
+    
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+  }
