@@ -3,26 +3,27 @@
   <link rel="stylesheet" type="text/css" href="popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <body>
-    <form id="questionForm">
-      <div class="container-input">
-        <input type="text" class="qInput" id="questionInput" placeholder="Ask a question...">
-      </div>
     
+    <form id="questionForm">
+      <div class="input-container">
+        <input type="text" class="qInput" id="questionInput" placeholder="Ask about this tab..">
+        <div id="settingsContainer">
+          <button id="settingsButton"><i class="fas fa-cog"></i></button>
+        </div>
+      </div>
     </form>
     <div id="answer">...</div>
-    <div id="settingsContainer">
-      <button id="settingsButton"><i class="fas fa-cog"></i></button>
-    </div>
 
-<div id="settingsModal" class="modal">
-  <div class="modal-content">
-    <form id="settingsForm">
-      <label for="apiKey">OpenAI API Key</label><br>
-      <input type="text" id="apiKey"  name="apiKey"><br>
-      <input type="submit" value="Save">
-    </form>
-  </div>
-</div>
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <form id="settingsForm">
+          <label for="apiKey">OpenAI API Key</label><br>
+          <input type="text" id="apiKey"  name="apiKey"><br>
+          <input type="submit" value="Save Settings">
+        </form>
+      </div>
+    </div>
     <script src="popup.js"></script>
+    <script src="onload.js"></script>
   </body>
 </html>

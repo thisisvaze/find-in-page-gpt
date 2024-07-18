@@ -2,7 +2,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   chrome.storage.sync.get(['apiKey'], function(result) {
     if (result.apiKey) {
 
-      console.log(request.content)
+    console.log(request.content)
     fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: "gpt-4-1106-preview",
+        model: "gpt-4o",
         messages: [
           {
             "role": "user",
@@ -28,16 +28,16 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     })
     .catch(error => {
       console.error('Error:', error);
-      sendResponse({error: error.toString()});
-      return false;
+      sendResponse({answer: "An error occurred while processing your request."});
+      return true;
     });
-      // existing fetch request
+    
+    // existing fetch request
     } else {
-      sendResponse({error: 'API Key is invalid. Please set your OpenAI API Key'});
-      return false;
+      sendResponse({answer: 'API Key is invalid. Please set your OpenAI API Key'});
+      return true;
     }
   });
-  
   
     return true;  // Will respond asynchronously.
   });

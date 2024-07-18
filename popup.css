@@ -1,22 +1,44 @@
-body {
-    min-width: 300px;
-    min-height: 200px;
-  }
+html {
+  min-width: 260px;
+  height: auto; /* Change from fixed height to auto */
+  min-height: 130px; /* Ensure a minimum height */
+  padding: 0px;
+  overflow: hidden; /* Ensure this line is present */
+  margin: 0; /* Ensure no margin */
+  background-color: #f0f0f0; /* Set your desired background color */
+  border-radius: 15px; /* Set your desired border-radius */
+}
+
   
   h1 {
     font-size: 20px;
     text-align: center;
   }
-  #settingsContainer {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-  }
+/* Add a flex container around the input and settings button */
+.input-container {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 100%;
+  align-items: center; /* Center vertically */
+  justify-content: left; /* Center horizontally */
+}
+
+/* Adjust the settings container to align with the input */
+#settingsContainer {
+  position: relative; /* Change from absolute to relative */
+  top: auto; /* Reset top position */
+  right: auto; /* Reset right position */
+  margin-left: 10px; /* Add margin to the left for spacing */
+}
+  
   .qInput {
-    width: 100%;
-    font-size: medium;
+    width: calc(100% - 20px); /* Adjust width to account for settings button */
+    font-size: small;
     border-radius: 3px;
     border: none;
+    padding: 10px; /* Add padding to the input area */
+    box-sizing: border-box; /* Ensure padding does not increase the overall size */
   }
   .qInput:focus {
     outline: none;
@@ -27,19 +49,63 @@ body {
     border: none;
   }
   .container-input{
-    margin-bottom:3px;
+    margin: 2px;
+    margin-bottom: 12px;
   }
 
-  #settingsButton{
-    background: none;
+  #answer {
+    font-size: small;
+    margin-bottom: 12px;
+    min-height: 45px;
+    background-color: rgb(227, 227, 227); /* Add white background */
+    border-radius: 5px; /* Add border radius */
+    padding: 10px; /* Optional: Add padding for better appearance */
+  }
+
+  #settingsButton {
+    color: rgb(93, 93, 93); /* Change background to grey */
     outline: none;
     border: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: background 0.4s ease; /* Add transition for smooth animation */
   }
-
+  
+  #settingsButton:hover {
+    background: #e2e2e2;
+   
+    border-radius: 3px; /* Square border highlight on hover */
+  /* Optional: Add a border to highlight */
+  }
   #apiKey {
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
     width: 95%;
     margin-right: 30px;
+    font-size: small;
+    background-color: #f0f0f0;
     margin-bottom: 10px;
+    margin-top: 3px;
+    /* Add secure indication */
+    font-family: 'Courier New', Courier, monospace; /* Optional: Use a monospaced font for better readability */
+    letter-spacing: 0.1em; /* Optional: Add some letter spacing */
+  }
+
+  #settingsForm input[type="submit"] {
+    border: none;
+    border-radius: 6px;
+    background-color: #e2e2e2;
+    color: black;
+    transition: background 0.4s ease;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding: 6px;
+    font-size: small;
+  }
+  
+  #settingsForm input[type="submit"]:hover {
+  background-color: #d7d7d7;
   }
   .buttonStyle {
 
@@ -68,7 +134,11 @@ body {
   }
   
   .modal-content {
+    max-width: 90%; /* Ensure the modal content does not exceed 90% of the viewport width */
+    max-height: 90%; /* Ensure the modal content does not exceed 90% of the viewport height */
+    overflow-y: auto;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 15px;
     padding: 10px;
+    border-radius: 6px;
   }
